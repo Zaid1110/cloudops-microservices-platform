@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: mysecretname
+  labels:
+    kubernetes.io/legacy-token-last-used: 2022-10-24
+    kubernetes.io/legacy-token-invalid-since: 2023-10-25
+  annotations:
+    kubernetes.io/service-account.name: jenkins
+type: kubernetes.io/service-account-token
