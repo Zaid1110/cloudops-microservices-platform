@@ -21,7 +21,7 @@ RUN apt-get -qq update \
         wget g++ \
     && rm -rf /var/lib/apt/lists/*
 
-# Download the grpc health probe
+# download the grpc health probe
 # renovate: datasource=github-releases depName=grpc-ecosystem/grpc-health-probe
 ENV GRPC_HEALTH_PROBE_VERSION=v0.4.18
 RUN wget -qO/bin/grpc_health_probe https://github.com/grpc-ecosystem/grpc-health-probe/releases/download/${GRPC_HEALTH_PROBE_VERSION}/grpc_health_probe-linux-amd64 && \
@@ -34,10 +34,9 @@ RUN pip install -r requirements.txt
 FROM base as without-grpc-health-probe-bin
 # Enable unbuffered logging
 ENV PYTHONUNBUFFERED=1
-# Enable Profiler
-ENV ENABLE_PROFILER=1
 
-WORKDIR /email_server
+# get packages
+WORKDIR /recommendationservice
 
 # Grab packages from builder
 COPY --from=builder /usr/local/lib/python3.10/ /usr/local/lib/python3.10/
@@ -45,9 +44,11 @@ COPY --from=builder /usr/local/lib/python3.10/ /usr/local/lib/python3.10/
 # Add the application
 COPY . .
 
+# set listen port
+ENV PORT "8080"
 EXPOSE 8080
-ENTRYPOINT [ "python", "email_server.py" ]
+
+ENTRYPOINT ["python", "recommendation_server.py"]
 
 FROM without-grpc-health-probe-bin
-
 COPY --from=builder /bin/grpc_health_probe /bin/grpc_health_probe
