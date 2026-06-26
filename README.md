@@ -20,7 +20,7 @@
 
 This project demonstrates a **real-world DevSecOps pipeline** for a polyglot microservices application — modelled after Google's [Online Boutique](https://github.com/GoogleCloudPlatform/microservices-demo). Each of the 11 microservices is independently built, scanned, and deployed through its own dedicated Jenkins pipeline, showcasing true microservice autonomy in a CI/CD context.
 
-**Live deployment** runs on **AWS EKS (Mumbai — ap-south-1)** exposed via an AWS Application Load Balancer.
+**Live deployment** runs on **AWS EKS (N. Virginia — us-east-1)** exposed via an AWS Application Load Balancer.
 
 ---
 
@@ -58,7 +58,7 @@ Developer → GitHub Push → Jenkins Webhook Trigger
                               ▼
                     ┌─────────────────────┐
                     │  AWS EKS Cluster    │
-                    │  ap-south-1 Mumbai  │
+                    │     us-east-1       │
                     └─────────────────────┘
 ```
 
@@ -209,8 +209,6 @@ minikube service frontend --url
 
 ## 📸 Screenshots
 
-> *(Add screenshots of Jenkins pipeline, ArgoCD sync status, and the live Online Boutique UI)*
-
 | Jenkins — 12 Pipelines | ArgoCD — GitOps Sync | Live Application |
 |---|---|---|
 | ![jenkins](./docs/jenkins.png) | ![argocd](./docs/argocd.png) | ![app](./docs/app.png) |
@@ -220,7 +218,7 @@ minikube service frontend --url
 ## 👤 Author
 
 **Zaid Aftab** — DevOps Engineer  
-[LinkedIn](https://linkedin.com/in/zaid11) · [GitHub](https://github.com/Zaid1110)
+[LinkedIn](https://linkedin.com/in/zaidaftab) · [GitHub](https://github.com/Zaid1110)
 
 ---
 
