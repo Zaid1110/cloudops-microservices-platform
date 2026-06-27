@@ -209,9 +209,23 @@ minikube service frontend --url
 
 ## 📸 Screenshots
 
-| Jenkins — 12 Pipelines | ArgoCD — GitOps Sync | Live Application |
-|---|---|---|
-| ![jenkins](./docs/jenkins.png) | ![argocd](./docs/argocd.png) | ![app](./docs/app.png) |
+## | Jenkins — 12 Pipelines
+ <img width="1440" height="857" alt="Screenshot 2026-06-26 at 4 57 44 PM" src="https://github.com/user-attachments/assets/7448fab9-b2cb-4b61-9912-e527a805eba3" />
+ 
+## | EKS Cluster
+ <img width="1440" height="847" alt="Screenshot 2026-06-26 at 7 19 06 AM" src="https://github.com/user-attachments/assets/bb16a1f7-680a-4976-8cf9-ad53bf245bc1" />
+ 
+## | Live Application
+ <img width="1440" height="871" alt="Screenshot 2026-06-26 at 7 27 30 AM" src="https://github.com/user-attachments/assets/95ee27fc-be7c-4a55-958f-5ea7f4e368ff" />
+ 
+## | All Pods Running
+ <img width="1286" height="786" alt="Screenshot 2026-06-26 at 7 23 50 AM" src="https://github.com/user-attachments/assets/3443a751-a0e7-4cae-93ad-569332d7b89b" />
+ 
+## | Docker Hub
+<img width="1440" height="847" alt="Screenshot 2026-06-26 at 7 16 54 AM" src="https://github.com/user-attachments/assets/b6a51db7-56ee-473f-b8cb-a332d2188c00" />
+
+## | Order Complete
+<img width="1440" height="871" alt="Screenshot 2026-06-26 at 7 28 56 AM" src="https://github.com/user-attachments/assets/5bee52e2-b0db-4f1e-aafe-3c353ae6fcfb" />
 
 ---
 
